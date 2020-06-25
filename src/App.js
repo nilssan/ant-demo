@@ -4,6 +4,8 @@ import { DatePicker, message, Alert, Button } from 'antd';
 import ButtonPage from './button';
 import IconPage from './icons';
 import DividerPage from './devider';
+import Grid from './grid';
+import Layoutpage from './layout';
 
 import './App.css';
 
@@ -14,16 +16,18 @@ function App() {
     setDate(value);
   };
   return (
-    <div style={{ width: 400, margin: '100px auto' }}>
-      <DatePicker onChange={handleChange} />
+    // <div style={{ width: 400, margin: '100px auto' }}>
+    <div>
+      {/* <DatePicker onChange={handleChange} />
       <div style={{ marginTop: 16 }}>
-        {/* Selected Date: {date ? date.format('YYYY-MM-DD') : 'None'} */}
         <Alert message="Selected Date" description={date ? date.format('YYYY-MM-DD') : 'None'} />
         
-      </div>
+      </div> */}
       {/* <ButtonPage/> */}
       {/* <IconPage /> */}
-      <DividerPage />
+      {/* <DividerPage /> */}
+      {/* <Grid/> */}
+      <Layoutpage/>
     </div>
   );
 }
