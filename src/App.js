@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 // import { Button, DatePicker, message } from 'antd';
-import { DatePicker, message, Alert } from 'antd';
+import { DatePicker, message, Alert, Button } from 'antd';
+import ButtonPage from './button';
+import IconPage from './icons';
+import DividerPage from './devider';
 
 import './App.css';
 
@@ -18,6 +21,9 @@ function App() {
         <Alert message="Selected Date" description={date ? date.format('YYYY-MM-DD') : 'None'} />
         
       </div>
+      {/* <ButtonPage/> */}
+      {/* <IconPage /> */}
+      <DividerPage />
     </div>
   );
 }
