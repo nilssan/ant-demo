@@ -6,6 +6,7 @@ import IconPage from './icons';
 import DividerPage from './devider';
 import Grid from './grid';
 import Layoutpage from './layout';
+import Steps from './steps';
 
 import './App.css';
 
@@ -27,7 +28,8 @@ function App() {
       {/* <IconPage /> */}
       {/* <DividerPage /> */}
       {/* <Grid/> */}
-      <Layoutpage/>
+      {/* <Layoutpage/> */}
+      <Steps/>
     </div>
   );
 }
