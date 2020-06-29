@@ -29,7 +29,11 @@ function App() {
       {/* <DividerPage /> */}
       {/* <Grid/> */}
       {/* <Layoutpage/> */}
-      <Steps/>
+      {/* <Steps/> */}
+
+      <div>
+        <h1>Home</h1>
+      </div>
     </div>
   );
 }
