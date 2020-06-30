@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {Suspense} from 'react';
+import MyErrorBoundary from './MyErrorBoundary';
 import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
-import { Route, Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom';
+const Contact = React.lazy(() => import('./contact'));
+
 const User = ({ match }) => <p>{match.params.id}</p>
 
 class Users extends React.Component {
@@ -23,6 +26,14 @@ class Users extends React.Component {
                     </li>
                 </ul>
                 <Route path="/users/:id" component={User} />
+                <MyErrorBoundary>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <section>
+                        <Contact />
+                    </section>  
+                </Suspense>
+                </MyErrorBoundary>
+
             </>
         )
     }
